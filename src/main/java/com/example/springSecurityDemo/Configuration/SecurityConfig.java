@@ -21,7 +21,9 @@ public class SecurityConfig {
 
     @Bean
     SecurityFilterChain defaultSecurityFilterChain(HttpSecurity http){
-        http.authorizeHttpRequests(request -> request.anyRequest().authenticated());
+        http.authorizeHttpRequests(request -> request
+                .requestMatchers("/h2-console/**").permitAll()
+                .anyRequest().authenticated());
 //        http.formLogin(Customizer.withDefaults());
         http.sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
         http.httpBasic(Customizer.withDefaults());
