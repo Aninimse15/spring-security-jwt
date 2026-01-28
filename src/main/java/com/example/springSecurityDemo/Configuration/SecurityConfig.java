@@ -6,6 +6,7 @@ import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -21,12 +22,13 @@ public class SecurityConfig {
 
     @Bean
     SecurityFilterChain defaultSecurityFilterChain(HttpSecurity http){
-        http.authorizeHttpRequests(request -> request
+        http.authorizeHttpRequests((request) -> request
                 .requestMatchers("/h2-console/**").permitAll()
                 .anyRequest().authenticated());
 //        http.formLogin(Customizer.withDefaults());
         http.sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
         http.httpBasic(Customizer.withDefaults());
+        http.csrf(AbstractHttpConfigurer::disable);
         return http.build();
     }
 
@@ -38,7 +40,7 @@ public class SecurityConfig {
                 .build();
 
         UserDetails user2 = User.withUsername("Admin")
-                .password("{noop] Admin")
+                .password("{noop]Admin")
                 .roles("ADMIN")
                 .build();
         return new InMemoryUserDetailsManager(user1, user2);
