@@ -12,12 +12,13 @@ public class Hello {
         return "Hello";
     }
 
+    @PreAuthorize("hasRole('USER')")
     @GetMapping("/user")
     public String userGreet(){
         return "Hello user";
     }
 
-    @PreAuthorize("hasRole('USER')")
+    @PreAuthorize("hasRole('ADMIN')")
     @GetMapping("/admin")
     public String adminGreet(){
         return "Hello admin";
