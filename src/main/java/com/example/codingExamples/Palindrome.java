@@ -38,7 +38,7 @@ public class Palindrome {
             case 1 -> getPalindromeUsingInBuiltMethod();
             case 2 -> getPalindromeUsingManualChecking();
             default -> {
-                System.out.println("Please enter right method\n-------------------------------------------------------------");
+                System.out.println("Please choose right method\n-------------------------------------------------------------");
                 yield null;
             }
         };
