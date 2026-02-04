@@ -15,6 +15,13 @@ public class ReverseNumber {
             revNumber = revNumber * 10 + k;
             number = number / 10;
         }
+
+/*
+//        using inbuilt method
+        int reversedNumber =Integer.parseInt(new StringBuilder(String.valueOf(number)).reverse().toString());
+//        or
+        int reversed = Integer.parseInt(new StringBuilder("" + number).reverse().toString());
+*/
         System.out.println("reversed number:"+revNumber);
     }
 }
