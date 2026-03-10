@@ -1,6 +1,5 @@
 package com.example.codingExamples;
 
-import java.util.LinkedHashMap;
 import java.util.Scanner;
 
 public class StringCompression {
