@@ -1,4 +1,4 @@
-package com.example.codingExamples;
+package com.example.codingExamples.stringPrograms;
 
 import java.util.*;
 import java.util.stream.Collectors;
