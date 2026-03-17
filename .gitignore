@@ -1,62 +1,24 @@
-# Java / Spring Boot
-target/
-build/
+# Compiled class file
 *.class
-*.war
-*.jar
-*.ear
 
-# Logs
+# Log file
 *.log
-logs/
-*.out
 
-# Maven
-.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/maven-wrapper.jar
-.mvn/timing.properties
+# BlueJ files
+*.ctxt
 
-# Gradle
-.gradle/
-**/build/
-!gradle/wrapper/gradle-wrapper.jar
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
 
-# IDE-specific files
-# IntelliJ
-.idea/
-*.iml
-*.ipr
-*.iws
-out/
+# Package Files #
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
 
-# Eclipse
-.project
-.classpath
-.settings/
-bin/
-
-# VS Code
-.vscode/
-
-# OS-specific files
-.DS_Store
-Thumbs.db
-
-# Temporary files
-*.tmp
-*.swp
-*.swo
-
-# Environment & credentials (you should keep them local)
-.env
-*.env.*
-application-*.yaml
-application-*.properties
-!application.properties
-!application.yml
-
-# Coverage / Reports
-.coverage
-*.lcov
-coverage/
-test-output/
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+replay_pid*
