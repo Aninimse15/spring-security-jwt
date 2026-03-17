@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: spring-security-jwt
+
+  security:
+    user:
+      name: User
+      password: User
+
+  datasource:
+    url: jdbc:h2:file:/home/aniket.nimse/test
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+  h2:
+    console:
+      enabled: true
